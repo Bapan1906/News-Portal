@@ -1,0 +1,44 @@
+/* Center the company name */
+.companyName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Ensure the container spans the full width */
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for centering the navbar items */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+
+}
+
+/* Navbar styling */
+.navbar {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+}
+
+.navbar .nav-link {
+    color: #000;
+    /* Default link color */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.navbar .nav-link:hover {
+    color: #007bff;
+    /* Color on hover */
+    text-decoration: underline;
+}

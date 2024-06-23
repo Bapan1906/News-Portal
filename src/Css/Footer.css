@@ -1,0 +1,64 @@
+.Footer {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    border-top:1.2px solid #343a40;
+    border-bottom: 0.8px solid #b7c4d0;
+  }
+  
+  .Footer .heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .Footer .heading-2, .Footer .Heading-3, .Footer .heading-4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .Footer ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .Footer p{
+    font-size: 0.85rem;
+  }
+  
+  .Footer .nav-link {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 0.85rem;
+  }
+  
+  .Footer .nav-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+    
+  }
+
+  .Footer .ContactInfo .email{
+    font-size: 2px;
+  }
+  
+  .Footer .footerIcon {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  
+  .Footer .footerIcon i {
+    font-size: 15px;
+    color: #343a40;
+  }
+  
+  .Footer .footerIcon i:hover {
+    color: #007bff;
+  }
+  
+  .Footer .copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
