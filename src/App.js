@@ -8,6 +8,7 @@ import Technical from "./component/Technical";
 import Political from "./component/Political";
 import Sports from "./component/Sports";
 import Entertainment from "./component/Entertainment";
+import World from "./component/World";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/political" element={<Political />} />
           <Route path="/sports" element={<Sports />} />
           <Route path="/entertainment" element={<Entertainment />} />
+          <Route path="/world" element={<World />} />
         </Routes>
       </div>
       <Footer />
