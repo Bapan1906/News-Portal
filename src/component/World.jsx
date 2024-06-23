@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "../Css/Business.css";
 
-function Business() {
+function World() {
   // State to hold the news articles
-  const [MyBNews, setMYBNews] = useState([]);
+  const [MyWorldNews, setMYWorldNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // State to manage loading
 
   // Fetching data from the news API
-  const BusinessNews = async () => {
+  const WorldNews = async () => {
     try {
       let response = await fetch(
-        "https://newsapi.org/v2/everything?q=bitcoin&apiKey=a5d6bc912c424260826170a825cbfe73"
+        "https://newsapi.org/v2/everything?q=tesla&from=2024-05-23&sortBy=publishedAt&apiKey=a5d6bc912c424260826170a825cbfe73"
       );
       // Parsing the JSON response
       let data = await response.json();
-      setMYBNews(data.articles);
+      setMYWorldNews(data.articles);
       setIsLoading(false); // Set loading to false after data is fetched
     } catch (error) {
       console.error("Error fetching the news articles:", error);
@@ -24,7 +24,7 @@ function Business() {
 
   // useEffect hook to call fetchData when the component mounts.
   useEffect(() => {
-    BusinessNews();
+    WorldNews();
   }, []);
 
   return (
@@ -33,13 +33,13 @@ function Business() {
         <p className="loading">Loading...</p> // Display loading message while data is being fetched
       ) : (
         <div className="MainDiv">
-          {MyBNews.map((element, index) => {
+          {MyWorldNews.map((element, index) => {
             return (
               <div className="card" key={index}>
                 <img
                   src={
                     element.urlToImage == null
-                      ? "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2024%2F0622%2Fr1348916_1023x682_3%2D2.jpg"
+                      ? "https://www.letemsvetemapplem.eu/wp-content/uploads/2018/11/Elon-Musk-1.jpg"
                       : element.urlToImage
                   }
                   className="card-img-top"
@@ -66,4 +66,4 @@ function Business() {
   );
 }
 
-export default Business;
+export default World;

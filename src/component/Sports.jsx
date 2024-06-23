@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "../Css/Business.css";
 
-function Business() {
+function Sports() {
   // State to hold the news articles
-  const [MyBNews, setMYBNews] = useState([]);
+  const [MySportNews, setMYSportsNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // State to manage loading
 
   // Fetching data from the news API
-  const BusinessNews = async () => {
+  const SportsNews = async () => {
     try {
       let response = await fetch(
         "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=a5d6bc912c424260826170a825cbfe73"
       );
       // Parsing the JSON response
       let data = await response.json();
-      setMYBNews(data.articles);
+      setMYSportsNews(data.articles);
       setIsLoading(false); // Set loading to false after data is fetched
     } catch (error) {
       console.error("Error fetching the news articles:", error);
@@ -24,7 +24,7 @@ function Business() {
 
   // useEffect hook to call fetchData when the component mounts.
   useEffect(() => {
-    BusinessNews();
+    SportsNews();
   }, []);
 
   return (
@@ -33,7 +33,7 @@ function Business() {
         <p className="loading">Loading...</p> // Display loading message while data is being fetched
       ) : (
         <div className="MainDiv">
-          {MyBNews.map((element, index) => {
+          {MySportNews.map((element, index) => {
             return (
               <div className="card" key={index}>
                 <img
@@ -66,4 +66,4 @@ function Business() {
   );
 }
 
-export default Business;
+export default Sports;

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../Css/Business.css";
 
-function Business() {
+function Political() {
   // State to hold the news articles
-  const [MyBNews, setMYBNews] = useState([]);
+  const [MyPoliticalNews, setMYPolitalNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // State to manage loading
 
   // Fetching data from the news API
@@ -14,7 +14,7 @@ function Business() {
       );
       // Parsing the JSON response
       let data = await response.json();
-      setMYBNews(data.articles);
+      setMYPolitalNews(data.articles);
       setIsLoading(false); // Set loading to false after data is fetched
     } catch (error) {
       console.error("Error fetching the news articles:", error);
@@ -33,7 +33,7 @@ function Business() {
         <p className="loading">Loading...</p> // Display loading message while data is being fetched
       ) : (
         <div className="MainDiv">
-          {MyBNews.map((element, index) => {
+          {MyPoliticalNews.map((element, index) => {
             return (
               <div className="card" key={index}>
                 <img
@@ -66,4 +66,4 @@ function Business() {
   );
 }
 
-export default Business;
+export default Political;
